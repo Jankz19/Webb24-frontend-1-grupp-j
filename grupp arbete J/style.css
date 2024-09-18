@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+.navbar-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 10px;
+    z-index: 10;
+}
+
+.navbar-top ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-top ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navbar-top ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+
+.navbar-left {
+    position: fixed;
+    width: 150px;
+    background-color: #82b7a1;
+    padding: 20px 10px;
+    z-index: 10;
+}
+
+.navbar-left ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-left ul li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.navbar-left ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+
+.navbar-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    z-index: 10;
+}
+
+.navbar-bottom ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-bottom ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navbar-bottom ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 160px; /* Offsetting due to left navbar */
+    margin-right: 20px;
+    width: calc(100% - 180px); /* Adjust for left navbar */
+    padding: 50px 0; /* Adjusting due to top and bottom navbars */
+}
+
+.image-box {
+    margin: 10px;
+    flex: 1 1 calc(33.33% - 20px); /* 3 images per row */
+}
+
+.image-box img {
+    width: 200;
+    height: 300px;
+    display: block;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .image-box {
+        flex: 1 1 calc(50% - 20px); /* 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-box {
+        flex: 1 1 calc(100% - 20px); /* 1 image per row on very small screens */
+    }
+}
